@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Almacenamiento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-4 text-center">
+    <h1 class="text-2xl font-bold">Tipos de Almacenamiento</h1>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-4xl mx-auto p-4">
+
+    <!-- Filtros -->
+    <section class="mb-6">
+      <label for="categoryFilter" class="block mb-2 font-semibold">Filtrar por categoría</label>
+      <select id="categoryFilter" class="border p-2 rounded w-full mb-4">
+        <option value="">Todas</option>
+        <option value="primaria">Memoria primaria</option>
+        <option value="secundaria">Memoria secundaria</option>
+        <option value="bases">Bases de datos</option>
+        <option value="nube">Nube/Objetos</option>
+        <option value="in-memory">In-Memory</option>
+        <option value="distribuido">Distribuido</option>
+      </select>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar..."
+        class="border p-2 rounded w-full"
+        aria-label="Buscar por texto"
+      />
+    </section>
+
+    <!-- Tarjetas -->
+    <section id="cardsContainer" class="grid gap-4 sm:grid-cols-2">
+      <!-- Ejemplo de tarjeta -->
+      <article class="card bg-white shadow rounded-xl p-4" data-category="nube">
+        <h2 class="text-lg font-bold">Amazon S3</h2>
+        <p class="text-sm text-gray-700">Almacenamiento de objetos escalable en la nube.</p>
+        <ul class="text-sm mt-2">
+          <li><strong>Pros:</strong> Alta durabilidad, escalabilidad.</li>
+          <li><strong>Contras:</strong> Latencia mayor que almacenamiento local.</li>
+          <li><strong>Latencia:</strong> 50–100ms.</li>
+          <li><strong>Coste:</strong> Bajo (pago por uso).</li>
+          <li><strong>Uso:</strong> Backups, Big Data, Data Lakes.</li>
+        </ul>
+        <a href="https://aws.amazon.com/s3/" target="_blank" class="text-blue-600 underline text-sm">Documentación</a>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 p-4">
+    © 2025 | Proyecto educativo · <a href="./README.md" class="underline">Ver README</a>
+  </footer>
+
+  <!-- JS -->
+  <script src="./assets/app.js"></script>
+</body>
+</html>
